@@ -100,9 +100,14 @@ const config = {
             label: 'Vidis',
           },
           {
-            to: 'api/vidis',
+            label: 'APIs',
             position: 'left',
-            label: 'API',
+            items: [
+              {
+                label: 'VIDIS Angebots API',
+                to: '/api/vidis',
+              },
+            ]
           },
           //{to: '/blog', label: 'Blog', position: 'left'},
           {
