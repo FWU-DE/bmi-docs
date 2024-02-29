@@ -73,14 +73,14 @@ const config = {
         },
         items: [
           {
-            to: 'docs/vidis/intro',
-            position: 'left',
-            label: 'Vidis',
-          },
-          {
             to: 'docs/mundo/intro',
             position: 'left',
             label: 'Mundo',
+          },
+          {
+            to: 'docs/vidis/intro',
+            position: 'left',
+            label: 'Vidis',
           },
           //{to: '/blog', label: 'Blog', position: 'left'},
           {
