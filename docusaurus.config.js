@@ -41,7 +41,7 @@ const config = {
         // Plugin Options for loading OpenAPI files
         specs: [
           {
-            spec: 'docs/VIDIS/api/swagger.json',
+            spec: 'api/swagger.json',
             route: 'api/vidis',
           },
         ],
