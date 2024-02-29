@@ -36,6 +36,23 @@ const config = {
 
   presets: [
     [
+      'redocusaurus',
+      {
+        // Plugin Options for loading OpenAPI files
+        specs: [
+          {
+            spec: 'docs/VIDIS/api/swagger.json',
+            route: 'api/vidis',
+          },
+        ],
+        // Theme Options for modifying how redoc renders them
+        theme: {
+          // Change with your site colors
+          primaryColor: '#ff6900',
+        },
+      },
+    ],
+    [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
@@ -81,6 +98,11 @@ const config = {
             to: 'docs/vidis/intro',
             position: 'left',
             label: 'Vidis',
+          },
+          {
+            to: 'api/vidis',
+            position: 'left',
+            label: 'API',
           },
           //{to: '/blog', label: 'Blog', position: 'left'},
           {
