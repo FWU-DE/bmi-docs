@@ -1,0 +1,1 @@
+(self.webpackChunkfwu_bmi_docs=self.webpackChunkfwu_bmi_docs||[]).push([[969],{7992:()=>{},3986:()=>{},9936:()=>{},2941:()=>{},8825:()=>{},7411:()=>{},2441:()=>{}}]);
