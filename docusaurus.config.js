@@ -107,7 +107,7 @@ const config = {
             ],
           },
         ],
-        copyright: `${new Date().getFullYear()} FWU - Das Medieninstitut der Länder, Inc. Built with Docusaurus.`,
+        copyright: `${new Date().getFullYear()} FWU - Das Medieninstitut der Länder, Inc.<br /> Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
