@@ -14,7 +14,7 @@ Zunächst wurden zwei Aufrufe umgesetzt
 
 Die API steht sowohl Portalbetreibern als auch Anbietern zur Verfügung. Für den Zugriff auf die 
 Dokumentation bzw. die API aufzurufen ist ein Login im Serviceportal mit der Rolle Schulleitung oder der 
-Rolle Anbieter auf https://service.vidis.schule rforderlich.
+Rolle Anbieter auf https://service.vidis.schule erforderlich.
 Für die Einrichtung von Testzugängen oder bei Fragen wenden Sie sich gerne an vidis-support@fwu.de.
 
 ## Funktionen für IDM Betreiber
