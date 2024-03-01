@@ -6,7 +6,7 @@ title: "Angebots-API"
 # Angebots API
 
 Die Angebots-Schnittstelle gibt Portalbetreibern (zunächst primär von Landesportalen) die Möglichkeit 
-, digitale Bildungsangebote automatisiert aus VIDIS abzufragen und damit verschiedene PortalAnwendungsfälle zu unterstützen.
+, digitale Bildungsangebote automatisiert aus VIDIS abzufragen und damit verschiedene Portal-Anwendungsfälle zu unterstützen.
 Es ist möglich, verfügbare digitale Bildungsangebote abzufragen und die zugehörigen Daten wie 
 Link, Beschreibung, Logo, Icon etc. automatisiert anzuzeigen. 
 Außerdem besteht zunächst die Möglichkeit, die Zuordnung digitaler Bildungsangebote zu Schulen abzufragen, um nur 
