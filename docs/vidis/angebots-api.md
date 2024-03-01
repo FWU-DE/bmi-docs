@@ -12,9 +12,8 @@ Link, Beschreibung, Logo, Icon etc. automatisiert anzuzeigen.
 Außerdem besteht zunächst die Möglichkeit, die Zuordnung digitaler Bildungsangebote zu Schulen abzufragen, um nur 
 Nutzer/innen jene digitale Bildungsangebote anzuzeigen, die zuvor auch für die Schule aktiviert wurden.
 
-Die API steht sowohl Portalbetreibern als auch Anbietern zur Verfügung. Für den Zugriff auf die 
-Dokumentation bzw. die API aufzurufen ist ein Login im Serviceportal mit der Rolle Schulleitung oder der 
-Rolle Anbieter auf https://service.vidis.schule erforderlich.
+Die API steht sowohl Portalbetreibern als auch Anbietern zur Verfügung. Für den Zugriff  ist ein Login im Serviceportal (https://service.vidis.schule) mit der Rolle Schulleitung oder der 
+Rolle Anbieter erforderlich.
 Für die Einrichtung von Testzugängen oder bei Fragen wenden Sie sich gerne an support@vidis.schule.
 
 ## Funktionen für IDM Betreiber
