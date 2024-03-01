@@ -5,18 +5,17 @@ title: "Angebots-API"
 
 # Angebots API
 
-Die Angebots-Schnittstelle soll Portalbetreibern (zunächst primär von Landesportalen) die Möglichkeit 
-geben, digitale Bildungsangebote automatisiert in VIDIS abzufragen und damit verschiedene PortalAnwendungsfälle zu unterstützen.
-Es wird möglich sein, verfügbare digitale Bildungsangebote abzufragen und die zugehörigen Daten wie 
-Link, Beschreibung, Logo, Icon etc. automatisiert abzufragen und anzuzeigen. Außerdem zunächst 
-schulbasiert die Möglichkeit, die Zuordnung digitaler Bildungsangebote zu Schulen abzufragen, um nur 
-Nutzer/innen digitale Bildungsangebote anzuzeigen, die zuvor auch für die Schule aktiviert wurden.
-Zunächst wurden zwei Aufrufe umgesetzt
+Die Angebots-Schnittstelle gibt Portalbetreibern (zunächst primär von Landesportalen) die Möglichkeit 
+, digitale Bildungsangebote automatisiert aus VIDIS abzufragen und damit verschiedene PortalAnwendungsfälle zu unterstützen.
+Es ist möglich, verfügbare digitale Bildungsangebote abzufragen und die zugehörigen Daten wie 
+Link, Beschreibung, Logo, Icon etc. automatisiert anzuzeigen. 
+Außerdem besteht zunächst die Möglichkeit, die Zuordnung digitaler Bildungsangebote zu Schulen abzufragen, um nur 
+Nutzer/innen jene digitale Bildungsangebote anzuzeigen, die zuvor auch für die Schule aktiviert wurden.
 
 Die API steht sowohl Portalbetreibern als auch Anbietern zur Verfügung. Für den Zugriff auf die 
 Dokumentation bzw. die API aufzurufen ist ein Login im Serviceportal mit der Rolle Schulleitung oder der 
 Rolle Anbieter auf https://service.vidis.schule erforderlich.
-Für die Einrichtung von Testzugängen oder bei Fragen wenden Sie sich gerne an vidis-support@fwu.de.
+Für die Einrichtung von Testzugängen oder bei Fragen wenden Sie sich gerne an support@vidis.schule.
 
 ## Funktionen für IDM Betreiber
 
