@@ -63,10 +63,7 @@ page=1&pageSize=1' \
 ```
 
 
-Eine Dokumentation befindet sich unter folgendem Link zur Swagger/OPenAPI-Dokumentation: 
-https://service.vidis.schule/o/api (Login mit 
-Schulaccount oder Angebotsaccount auf service.vidis.schule erforderlich). Dort bekommt man auch einen 
-Einblick in die verwendeten Schemas, dies würd hier zu weit führen.
+Eine vollständige Doku der API findet sich unter uner APIs.
 Die hier verwendeten Werte sind nur Dummy-Werte und stellen keine "rechten" Organisations- oder Angebots-IDs dar.
   
 | Name | Default | Description |
