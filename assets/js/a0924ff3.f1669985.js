@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfwu_bmi_docs=self.webpackChunkfwu_bmi_docs||[]).push([[594],{4061:s=>{s.exports=JSON.parse('{"name":"docusaurus-plugin-content-pages","id":"default"}')}}]);
