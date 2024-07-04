@@ -1,0 +1,353 @@
+"Marks the field, argument, input field or enum value as deprecated"
+directive @deprecated(
+    "The reason for the deprecation"
+    reason: String = "No longer supported"
+  ) on FIELD_DEFINITION | ARGUMENT_DEFINITION | ENUM_VALUE | INPUT_FIELD_DEFINITION
+
+"Directs the executor to include this field or fragment only when the `if` argument is true"
+directive @include(
+    "Included when true."
+    if: Boolean!
+  ) on FIELD | FRAGMENT_SPREAD | INLINE_FRAGMENT
+
+"Directs the executor to skip this field or fragment when the `if` argument is true."
+directive @skip(
+    "Skipped when true."
+    if: Boolean!
+  ) on FIELD | FRAGMENT_SPREAD | INLINE_FRAGMENT
+
+"Exposes a URL that specifies the behaviour of this scalar."
+directive @specifiedBy(
+    "The URL that specifies the behaviour of this scalar."
+    url: String!
+  ) on SCALAR
+
+type ClassLevel {
+  id: ID
+  name: String
+}
+
+type Competence {
+  id: ID!
+  level: Int
+  name: String!
+  path: [String]
+}
+
+type Echo {
+  text: String
+}
+
+type EducationalLevel {
+  id: ID
+  name: String
+  order: Int
+}
+
+type Language {
+  deValue: String!
+  enValue: String!
+  id: String!
+  main: Boolean!
+  name: String!
+}
+
+type License {
+  categoryId: String
+  categoryName: String
+  country: String
+  id: String
+  name: String
+  text: String
+  url: String
+  version: String
+}
+
+type LinkResponse {
+  links: [PaidMediaLinkWrapper]
+  size: String
+}
+
+type Media {
+  dataType: String
+  downloadUrl: String
+  duration: String
+  originalUrl: String
+  size: Long
+  thumbDetails: String
+  thumbPreview: String
+  url: String
+}
+
+type MediaCollection {
+  availableFrom: LocalDateTime
+  availableTo: LocalDateTime
+  creationDate: LocalDateTime!
+  creator: String!
+  description: String!
+  firstPublished: LocalDateTime
+  id: String!
+  keywords: [String!]
+  lastModified: LocalDateTime
+  media: [String!]
+  sodixId: String!
+  status: MediaCollectionStatus!
+  thumbnailDetails: String!
+  thumbnailPreview: String!
+  title: String!
+}
+
+type MediaLicenseList {
+  identifier: String
+  mediaCentersIds: [Int]
+  signature: String
+}
+
+type Metadata {
+  additionalLicenseInformation: String
+  author: [String]
+  authorWebsite: String
+  availableTo: LocalDateTime
+  childMedia: [String]
+  classLevel: String
+  competencies: [Competence]
+  cost: Cost
+  creationDate: LocalDateTime
+  description: String
+  downloadRight: Boolean
+  eafCode: [String]
+  educationalLevels: [String]
+  externalIds: [String]
+  id: ID!
+  identifier: String!
+  keywords: [String]
+  language: [String]
+  learnResourceType: [LRT]!
+  license: License
+  linkedObjects: [String]
+  media: Media
+  paidMetadataInfo: PaidMetadataInfo
+  parentMedia: String
+  paymentType: PaymentType
+  producer: String
+  publishedTime: LocalDateTime
+  publishers: [Publisher]
+  recordStatus: MetadataStatus
+  schoolTypes: [String]
+  source: Source
+  subject: [Subject]
+  targetAudience: [UserGroup]
+  title: String!
+  updated: LocalDateTime
+}
+
+type PaidMediaAdditionalFields {
+  arixDownloadLink: Boolean
+  arixId: String
+  arixPlaybackLink: Boolean
+  existsInSodix: Boolean
+  identifier: String
+}
+
+type PaidMediaLinkWrapper {
+  href: String
+  linkType: String
+}
+
+type PaidMetadataInfo {
+  broadcastDates: [String]
+  didacticalRemarks: String
+  distributor: String
+  eafRawMetadata: String
+  extendedTitle: String
+  fsk: String
+  originalTitle: String
+  producerCountries: [String]
+  producerDate: LocalDateTime
+  seriesTitle: String
+  subtitles: [String]
+  usk: String
+}
+
+type PlayoutInfo {
+  playoutUrl: String
+}
+
+type Publisher {
+  description: String
+  id: ID!
+  imageDetails: String
+  imagePreview: String
+  linkToGeneralUseRights: String
+  metadata: [Metadata]
+  officialWebsite: String
+  sources: [Source]
+  title: String
+}
+
+type Query {
+  countAllMetadata(dataTypes: [String], direction: Direction, eafCode: [String], from: LocalDateTime, fromToUsingField: FromToUsingField, learnResourceTypes: [LRT], page: Int, pageSize: Int, paymentType: PaymentType, publisherId: ID, recordStatus: [MetadataStatus], sortBy: MetadataSortFields, sourceId: ID, sourceStatus: SourceStatus, to: LocalDateTime): Int
+  countCollections(sodixId: String, statuses: [MediaCollectionStatus], title: String): Long
+  countPublishers: Int
+  countSources: Int
+  echo: Echo
+  findAllMetadata(dataTypes: [String], direction: Direction, eafCode: [String], from: LocalDateTime, fromToUsingField: FromToUsingField, learnResourceTypes: [LRT], page: Int, pageSize: Int, paymentType: PaymentType, publisherId: ID, recordStatus: [MetadataStatus], sortBy: MetadataSortFields, sourceId: ID, sourceStatus: SourceStatus, to: LocalDateTime): [Metadata]
+  getAllClassLevels: [ClassLevel]
+  getAllCollections(order: Direction = ASC, page: Int = 0, pageSize: Int = 50, sodixId: String, sortField: CollectionSortField = SODIX_ID, statuses: [MediaCollectionStatus], title: String): [MediaCollection]
+  getAllEducationalLevels: [EducationalLevel]
+  getAllLanguages: [Language]
+  getAllLicenses: [License]
+  getAllTypeOfSchools: [TypeOfSchool]
+  getPlayoutWindow(autoplay: Boolean, clientIp: String, colorBg: String, colorFg: String, controls: Boolean, endOffset: Int, fullscreen: Boolean, mediaId: String!, miniPlayer: Boolean, pictureInPicture: Boolean, playbackRates: Boolean, quality: Boolean, startOffset: Int, subtitles: Boolean): PlayoutInfo
+  mediaCollection(id: String): MediaCollection
+  metadata(id: ID!): Metadata
+  metadataByIdentifier(identifier: String!): Metadata
+  paidMediaAdditionalFieldsLicenseTable: [PaidMediaAdditionalFields]
+  paidMediaLicenseTable: [MediaLicenseList]
+  paidMediaLinks(id: ID): LinkResponse
+  publisher(id: ID!): Publisher
+  publishers: [Publisher]
+  source(id: ID!): Source
+  sources: [Source]
+  subjects: [Subject]
+}
+
+type Source {
+  created: LocalDateTime
+  description: String
+  edited: LocalDateTime
+  generalUseRights: String
+  id: ID!
+  imageUrl: String
+  metadata: [Metadata]
+  name: String
+  publishers: [Publisher]
+  sourceStatus: Boolean
+  termsOfUse: String
+  website: String
+}
+
+type Subject {
+  id: ID!
+  level: Int
+  name: String!
+  path: [String]
+}
+
+type TypeOfSchool {
+  id: String
+  name: String
+}
+
+enum CollectionSortField {
+  SODIX_ID
+  STATUS
+  TITLE
+}
+
+enum Cost {
+  FEE_REQUIRED
+  FREE
+  FREEMIUM
+  UNSET
+}
+
+enum Direction {
+  ASC
+  DESC
+}
+
+enum FromToUsingField {
+  CREATED
+  UPDATED
+}
+
+enum LRT {
+  APP
+  ARBEITSBLATT
+  AUDIO
+  AUDIOVISUELLES
+  BILD
+  BROSCHUERE
+  DATEN
+  ENTDECKENDES
+  EXPERIMENT
+  FALLSTUDIE
+  GLOSSAR
+  HANDBUCH
+  INTERAKTION
+  KARTE
+  KURS
+  LERNKONTROLLE
+  LERNSPIEL
+  MODELL
+  OFFENE
+  PRESENTATION
+  PROJECT
+  QUELLE
+  RADIO
+  RECHERCHE
+  RESSOURCENTYP
+  ROLLENSPIEL
+  SIMULATION
+  SOFTWARE
+  SONSTIGES
+  TEST
+  TEXT
+  UBUNG
+  UNTERRICHTSBAUSTEIN
+  UNTERRICHTSPLANUNG
+  VERANSCHAULICHUNG
+  VIDEO
+  WEBSEITE
+  WEBTOOL
+}
+
+enum MediaCollectionStatus {
+  ACTIVATED
+  CREATED
+  DEACTIVATED
+  DISABLED
+  REVISED
+  UNAVAILABLE
+}
+
+enum MetadataSortFields {
+  CREATED
+  ID
+  IDENTIFIER
+  TITLE
+  UPDATED
+}
+
+enum MetadataStatus {
+  ACTIVATED
+  CREATED
+  DEACTIVATED
+  DISABLED
+  DRAFT
+  REVISED
+  UNAVAILABLE
+}
+
+enum PaymentType {
+  NOT_PAID
+  PAID
+}
+
+enum SourceStatus {
+  DISABLED
+  ENABLED
+}
+
+enum UserGroup {
+  learner
+  parent
+  teacher
+}
+
+"Local Date Time type"
+scalar LocalDateTime
+
+"Long type"
+scalar Long

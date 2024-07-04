@@ -1,0 +1,311 @@
+---
+id: metadata
+title: Metadata
+---
+
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={props.class}>{props.text}</span></>
+
+import { useState } from 'react';
+
+export const Details = ({ dataOpen, dataClose, children, startOpen = false }) => {
+  const [open, setOpen] = useState(startOpen);
+  return (
+    <details {...(open ? { open: true } : {})} className="details" style={{ border:'none', boxShadow:'none', background:'var(--ifm-background-color)' }}>
+      <summary
+        onClick={(e) => {
+          e.preventDefault();
+          setOpen((open) => !open);
+        }}
+        style={{ listStyle:'none' }}
+      >
+      {open ? dataOpen : dataClose}
+      </summary>
+      {open && children}
+    </details>
+  );
+};
+
+
+
+
+
+
+
+
+No description
+
+
+```graphql
+type Metadata {
+  additionalLicenseInformation: String
+  author: [String]
+  authorWebsite: String
+  availableTo: LocalDateTime
+  childMedia: [String]
+  classLevel: String
+  competencies: [Competence]
+  cost: Cost
+  creationDate: LocalDateTime
+  description: String
+  downloadRight: Boolean
+  eafCode: [String]
+  educationalLevels: [String]
+  externalIds: [String]
+  id: ID!
+  identifier: String!
+  keywords: [String]
+  language: [String]
+  learnResourceType: [LRT]!
+  license: License
+  linkedObjects: [String]
+  media: Media
+  paidMetadataInfo: PaidMetadataInfo
+  parentMedia: String
+  paymentType: PaymentType
+  producer: String
+  publishedTime: LocalDateTime
+  publishers: [Publisher]
+  recordStatus: MetadataStatus
+  schoolTypes: [String]
+  source: Source
+  subject: [Subject]
+  targetAudience: [UserGroup]
+  title: String!
+  updated: LocalDateTime
+}
+```
+
+
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>additionalLicenseInformation</b></code>](#)<Bullet />[`String`](/sodixapi/types/scalars/string) <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>author</b></code>](#)<Bullet />[`[String]`](/sodixapi/types/scalars/string) <Badge class="badge badge--secondary" text="list"/> <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>authorWebsite</b></code>](#)<Bullet />[`String`](/sodixapi/types/scalars/string) <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>availableTo</b></code>](#)<Bullet />[`LocalDateTime`](/sodixapi/types/scalars/local-date-time) <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>childMedia</b></code>](#)<Bullet />[`[String]`](/sodixapi/types/scalars/string) <Badge class="badge badge--secondary" text="list"/> <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>classLevel</b></code>](#)<Bullet />[`String`](/sodixapi/types/scalars/string) <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>competencies</b></code>](#)<Bullet />[`[Competence]`](/sodixapi/types/objects/competence) <Badge class="badge badge--secondary" text="list"/> <Badge class="badge badge--secondary" text="object"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>cost</b></code>](#)<Bullet />[`Cost`](/sodixapi/types/enums/cost) <Badge class="badge badge--secondary" text="enum"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>creationDate</b></code>](#)<Bullet />[`LocalDateTime`](/sodixapi/types/scalars/local-date-time) <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>description</b></code>](#)<Bullet />[`String`](/sodixapi/types/scalars/string) <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>downloadRight</b></code>](#)<Bullet />[`Boolean`](/sodixapi/types/scalars/boolean) <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>eafCode</b></code>](#)<Bullet />[`[String]`](/sodixapi/types/scalars/string) <Badge class="badge badge--secondary" text="list"/> <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>educationalLevels</b></code>](#)<Bullet />[`[String]`](/sodixapi/types/scalars/string) <Badge class="badge badge--secondary" text="list"/> <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>externalIds</b></code>](#)<Bullet />[`[String]`](/sodixapi/types/scalars/string) <Badge class="badge badge--secondary" text="list"/> <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>id</b></code>](#)<Bullet />[`ID!`](/sodixapi/types/scalars/id) <Badge class="badge badge--secondary" text="non-null"/> <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>identifier</b></code>](#)<Bullet />[`String!`](/sodixapi/types/scalars/string) <Badge class="badge badge--secondary" text="non-null"/> <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>keywords</b></code>](#)<Bullet />[`[String]`](/sodixapi/types/scalars/string) <Badge class="badge badge--secondary" text="list"/> <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>language</b></code>](#)<Bullet />[`[String]`](/sodixapi/types/scalars/string) <Badge class="badge badge--secondary" text="list"/> <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>learnResourceType</b></code>](#)<Bullet />[`[LRT]!`](/sodixapi/types/enums/lrt) <Badge class="badge badge--secondary" text="non-null"/> <Badge class="badge badge--secondary" text="enum"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>license</b></code>](#)<Bullet />[`License`](/sodixapi/types/objects/license) <Badge class="badge badge--secondary" text="object"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>linkedObjects</b></code>](#)<Bullet />[`[String]`](/sodixapi/types/scalars/string) <Badge class="badge badge--secondary" text="list"/> <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>media</b></code>](#)<Bullet />[`Media`](/sodixapi/types/objects/media) <Badge class="badge badge--secondary" text="object"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>paidMetadataInfo</b></code>](#)<Bullet />[`PaidMetadataInfo`](/sodixapi/types/objects/paid-metadata-info) <Badge class="badge badge--secondary" text="object"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>parentMedia</b></code>](#)<Bullet />[`String`](/sodixapi/types/scalars/string) <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>paymentType</b></code>](#)<Bullet />[`PaymentType`](/sodixapi/types/enums/payment-type) <Badge class="badge badge--secondary" text="enum"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>producer</b></code>](#)<Bullet />[`String`](/sodixapi/types/scalars/string) <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>publishedTime</b></code>](#)<Bullet />[`LocalDateTime`](/sodixapi/types/scalars/local-date-time) <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>publishers</b></code>](#)<Bullet />[`[Publisher]`](/sodixapi/types/objects/publisher) <Badge class="badge badge--secondary" text="list"/> <Badge class="badge badge--secondary" text="object"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>recordStatus</b></code>](#)<Bullet />[`MetadataStatus`](/sodixapi/types/enums/metadata-status) <Badge class="badge badge--secondary" text="enum"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>schoolTypes</b></code>](#)<Bullet />[`[String]`](/sodixapi/types/scalars/string) <Badge class="badge badge--secondary" text="list"/> <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>source</b></code>](#)<Bullet />[`Source`](/sodixapi/types/objects/source) <Badge class="badge badge--secondary" text="object"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>subject</b></code>](#)<Bullet />[`[Subject]`](/sodixapi/types/objects/subject) <Badge class="badge badge--secondary" text="list"/> <Badge class="badge badge--secondary" text="object"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>targetAudience</b></code>](#)<Bullet />[`[UserGroup]`](/sodixapi/types/enums/user-group) <Badge class="badge badge--secondary" text="list"/> <Badge class="badge badge--secondary" text="enum"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>title</b></code>](#)<Bullet />[`String!`](/sodixapi/types/scalars/string) <Badge class="badge badge--secondary" text="non-null"/> <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Metadata.<b>updated</b></code>](#)<Bullet />[`LocalDateTime`](/sodixapi/types/scalars/local-date-time) <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+
+
+
+
+### Returned By
+
+[`findAllMetadata`](/sodixapi/api/queries/find-all-metadata)  <Badge class="badge badge--secondary" text="query"/><Bullet />[`metadata`](/sodixapi/api/queries/metadata)  <Badge class="badge badge--secondary" text="query"/><Bullet />[`metadataByIdentifier`](/sodixapi/api/queries/metadata-by-identifier)  <Badge class="badge badge--secondary" text="query"/>
+
+### Member Of
+
+[`Publisher`](/sodixapi/types/objects/publisher)  <Badge class="badge badge--secondary" text="object"/><Bullet />[`Source`](/sodixapi/types/objects/source)  <Badge class="badge badge--secondary" text="object"/>
+

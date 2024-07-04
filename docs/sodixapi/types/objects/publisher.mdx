@@ -1,0 +1,129 @@
+---
+id: publisher
+title: Publisher
+---
+
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={props.class}>{props.text}</span></>
+
+import { useState } from 'react';
+
+export const Details = ({ dataOpen, dataClose, children, startOpen = false }) => {
+  const [open, setOpen] = useState(startOpen);
+  return (
+    <details {...(open ? { open: true } : {})} className="details" style={{ border:'none', boxShadow:'none', background:'var(--ifm-background-color)' }}>
+      <summary
+        onClick={(e) => {
+          e.preventDefault();
+          setOpen((open) => !open);
+        }}
+        style={{ listStyle:'none' }}
+      >
+      {open ? dataOpen : dataClose}
+      </summary>
+      {open && children}
+    </details>
+  );
+};
+
+
+
+
+
+
+
+
+No description
+
+
+```graphql
+type Publisher {
+  description: String
+  id: ID!
+  imageDetails: String
+  imagePreview: String
+  linkToGeneralUseRights: String
+  metadata: [Metadata]
+  officialWebsite: String
+  sources: [Source]
+  title: String
+}
+```
+
+
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>Publisher.<b>description</b></code>](#)<Bullet />[`String`](/sodixapi/types/scalars/string) <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Publisher.<b>id</b></code>](#)<Bullet />[`ID!`](/sodixapi/types/scalars/id) <Badge class="badge badge--secondary" text="non-null"/> <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Publisher.<b>imageDetails</b></code>](#)<Bullet />[`String`](/sodixapi/types/scalars/string) <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Publisher.<b>imagePreview</b></code>](#)<Bullet />[`String`](/sodixapi/types/scalars/string) <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Publisher.<b>linkToGeneralUseRights</b></code>](#)<Bullet />[`String`](/sodixapi/types/scalars/string) <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Publisher.<b>metadata</b></code>](#)<Bullet />[`[Metadata]`](/sodixapi/types/objects/metadata) <Badge class="badge badge--secondary" text="list"/> <Badge class="badge badge--secondary" text="object"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Publisher.<b>officialWebsite</b></code>](#)<Bullet />[`String`](/sodixapi/types/scalars/string) <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Publisher.<b>sources</b></code>](#)<Bullet />[`[Source]`](/sodixapi/types/objects/source) <Badge class="badge badge--secondary" text="list"/> <Badge class="badge badge--secondary" text="object"/> 
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Publisher.<b>title</b></code>](#)<Bullet />[`String`](/sodixapi/types/scalars/string) <Badge class="badge badge--secondary" text="scalar"/> 
+> 
+> 
+> 
+> 
+
+
+
+
+
+### Returned By
+
+[`publisher`](/sodixapi/api/queries/publisher)  <Badge class="badge badge--secondary" text="query"/><Bullet />[`publishers`](/sodixapi/api/queries/publishers)  <Badge class="badge badge--secondary" text="query"/>
+
+### Member Of
+
+[`Metadata`](/sodixapi/types/objects/metadata)  <Badge class="badge badge--secondary" text="object"/><Bullet />[`Source`](/sodixapi/types/objects/source)  <Badge class="badge badge--secondary" text="object"/>
+

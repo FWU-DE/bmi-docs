@@ -1,0 +1,328 @@
+---
+id: lrt
+title: LRT
+---
+
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={props.class}>{props.text}</span></>
+
+import { useState } from 'react';
+
+export const Details = ({ dataOpen, dataClose, children, startOpen = false }) => {
+  const [open, setOpen] = useState(startOpen);
+  return (
+    <details {...(open ? { open: true } : {})} className="details" style={{ border:'none', boxShadow:'none', background:'var(--ifm-background-color)' }}>
+      <summary
+        onClick={(e) => {
+          e.preventDefault();
+          setOpen((open) => !open);
+        }}
+        style={{ listStyle:'none' }}
+      >
+      {open ? dataOpen : dataClose}
+      </summary>
+      {open && children}
+    </details>
+  );
+};
+
+
+
+
+
+
+
+
+No description
+
+
+```graphql
+enum LRT {
+  APP
+  ARBEITSBLATT
+  AUDIO
+  AUDIOVISUELLES
+  BILD
+  BROSCHUERE
+  DATEN
+  ENTDECKENDES
+  EXPERIMENT
+  FALLSTUDIE
+  GLOSSAR
+  HANDBUCH
+  INTERAKTION
+  KARTE
+  KURS
+  LERNKONTROLLE
+  LERNSPIEL
+  MODELL
+  OFFENE
+  PRESENTATION
+  PROJECT
+  QUELLE
+  RADIO
+  RECHERCHE
+  RESSOURCENTYP
+  ROLLENSPIEL
+  SIMULATION
+  SOFTWARE
+  SONSTIGES
+  TEST
+  TEXT
+  UBUNG
+  UNTERRICHTSBAUSTEIN
+  UNTERRICHTSPLANUNG
+  VERANSCHAULICHUNG
+  VIDEO
+  WEBSEITE
+  WEBTOOL
+}
+```
+
+
+
+
+### Values
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>APP</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>ARBEITSBLATT</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>AUDIO</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>AUDIOVISUELLES</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>BILD</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>BROSCHUERE</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>DATEN</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>ENTDECKENDES</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>EXPERIMENT</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>FALLSTUDIE</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>GLOSSAR</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>HANDBUCH</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>INTERAKTION</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>KARTE</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>KURS</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>LERNKONTROLLE</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>LERNSPIEL</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>MODELL</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>OFFENE</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>PRESENTATION</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>PROJECT</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>QUELLE</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>RADIO</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>RECHERCHE</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>RESSOURCENTYP</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>ROLLENSPIEL</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>SIMULATION</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>SOFTWARE</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>SONSTIGES</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>TEST</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>TEXT</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>UBUNG</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>UNTERRICHTSBAUSTEIN</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>UNTERRICHTSPLANUNG</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>VERANSCHAULICHUNG</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>VIDEO</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>WEBSEITE</b></code>](#)  
+> 
+> 
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>LRT.<b>WEBTOOL</b></code>](#)  
+> 
+> 
+> 
+> 
+
+
+
+
+
+### Member Of
+
+[`countAllMetadata`](/sodixapi/api/queries/count-all-metadata)  <Badge class="badge badge--secondary" text="query"/><Bullet />[`findAllMetadata`](/sodixapi/api/queries/find-all-metadata)  <Badge class="badge badge--secondary" text="query"/><Bullet />[`Metadata`](/sodixapi/types/objects/metadata)  <Badge class="badge badge--secondary" text="object"/>
+

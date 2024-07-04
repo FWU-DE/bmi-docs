@@ -1,0 +1,59 @@
+---
+id: id
+title: ID
+---
+
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={props.class}>{props.text}</span></>
+
+import { useState } from 'react';
+
+export const Details = ({ dataOpen, dataClose, children, startOpen = false }) => {
+  const [open, setOpen] = useState(startOpen);
+  return (
+    <details {...(open ? { open: true } : {})} className="details" style={{ border:'none', boxShadow:'none', background:'var(--ifm-background-color)' }}>
+      <summary
+        onClick={(e) => {
+          e.preventDefault();
+          setOpen((open) => !open);
+        }}
+        style={{ listStyle:'none' }}
+      >
+      {open ? dataOpen : dataClose}
+      </summary>
+      {open && children}
+    </details>
+  );
+};
+
+
+
+
+
+
+
+
+The `ID` scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as `"4"`) or integer (such as `4`) input value will be accepted as an ID.
+
+
+```graphql
+scalar ID
+```
+
+
+
+
+
+
+
+
+### Member Of
+
+[`ClassLevel`](/sodixapi/types/objects/class-level)  <Badge class="badge badge--secondary" text="object"/><Bullet />[`Competence`](/sodixapi/types/objects/competence)  <Badge class="badge badge--secondary" text="object"/><Bullet />[`countAllMetadata`](/sodixapi/api/queries/count-all-metadata)  <Badge class="badge badge--secondary" text="query"/><Bullet />[`EducationalLevel`](/sodixapi/types/objects/educational-level)  <Badge class="badge badge--secondary" text="object"/><Bullet />[`findAllMetadata`](/sodixapi/api/queries/find-all-metadata)  <Badge class="badge badge--secondary" text="query"/><Bullet />[`metadata`](/sodixapi/api/queries/metadata)  <Badge class="badge badge--secondary" text="query"/><Bullet />[`Metadata`](/sodixapi/types/objects/metadata)  <Badge class="badge badge--secondary" text="object"/><Bullet />[`paidMediaLinks`](/sodixapi/api/queries/paid-media-links)  <Badge class="badge badge--secondary" text="query"/><Bullet />[`publisher`](/sodixapi/api/queries/publisher)  <Badge class="badge badge--secondary" text="query"/><Bullet />[`Publisher`](/sodixapi/types/objects/publisher)  <Badge class="badge badge--secondary" text="object"/><Bullet />[`source`](/sodixapi/api/queries/source)  <Badge class="badge badge--secondary" text="query"/><Bullet />[`Source`](/sodixapi/types/objects/source)  <Badge class="badge badge--secondary" text="object"/><Bullet />[`Subject`](/sodixapi/types/objects/subject)  <Badge class="badge badge--secondary" text="object"/>
+

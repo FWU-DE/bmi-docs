@@ -1,0 +1,63 @@
+---
+id: int
+title: Int
+---
+
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span className={props.class}>{props.text}</span></>
+
+import { useState } from 'react';
+
+export const Details = ({ dataOpen, dataClose, children, startOpen = false }) => {
+  const [open, setOpen] = useState(startOpen);
+  return (
+    <details {...(open ? { open: true } : {})} className="details" style={{ border:'none', boxShadow:'none', background:'var(--ifm-background-color)' }}>
+      <summary
+        onClick={(e) => {
+          e.preventDefault();
+          setOpen((open) => !open);
+        }}
+        style={{ listStyle:'none' }}
+      >
+      {open ? dataOpen : dataClose}
+      </summary>
+      {open && children}
+    </details>
+  );
+};
+
+
+
+
+
+
+
+
+The `Int` scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1.
+
+
+```graphql
+scalar Int
+```
+
+
+
+
+
+
+
+
+### Returned By
+
+[`countAllMetadata`](/sodixapi/api/queries/count-all-metadata)  <Badge class="badge badge--secondary" text="query"/><Bullet />[`countPublishers`](/sodixapi/api/queries/count-publishers)  <Badge class="badge badge--secondary" text="query"/><Bullet />[`countSources`](/sodixapi/api/queries/count-sources)  <Badge class="badge badge--secondary" text="query"/>
+
+### Member Of
+
+[`Competence`](/sodixapi/types/objects/competence)  <Badge class="badge badge--secondary" text="object"/><Bullet />[`countAllMetadata`](/sodixapi/api/queries/count-all-metadata)  <Badge class="badge badge--secondary" text="query"/><Bullet />[`EducationalLevel`](/sodixapi/types/objects/educational-level)  <Badge class="badge badge--secondary" text="object"/><Bullet />[`findAllMetadata`](/sodixapi/api/queries/find-all-metadata)  <Badge class="badge badge--secondary" text="query"/><Bullet />[`getAllCollections`](/sodixapi/api/queries/get-all-collections)  <Badge class="badge badge--secondary" text="query"/><Bullet />[`getPlayoutWindow`](/sodixapi/api/queries/get-playout-window)  <Badge class="badge badge--secondary" text="query"/><Bullet />[`MediaLicenseList`](/sodixapi/types/objects/media-license-list)  <Badge class="badge badge--secondary" text="object"/><Bullet />[`Subject`](/sodixapi/types/objects/subject)  <Badge class="badge badge--secondary" text="object"/>
+
