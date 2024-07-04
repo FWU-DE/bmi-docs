@@ -17,7 +17,22 @@ const config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/bmi-docs/',
-  plugins: ["@graphql-markdown/docusaurus"],
+  plugins: [
+    [
+      "@graphql-markdown/docusaurus",
+      /** @type {import('@graphql-markdown/types').ConfigOptions} */
+      {
+        // id: 'default', // omitted => default instance
+        schema: "./schema/sodix.graphql",
+        rootPath: "./docs", // docs will be generated under './docs/swapi' (rootPath/baseURL)
+        baseURL: "sodixapi",
+        homepage: "./docs/sodixapi.md",
+        loaders: {
+          GraphQLFileLoader: "@graphql-tools/graphql-file-loader" // local file schema
+        }
+      },
+    ]
+  ],
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'fwu-de', // Usually your GitHub org/user name.
