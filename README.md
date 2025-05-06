@@ -27,3 +27,4 @@ This command generates static content into the `build` directory and can be serv
 ### Deployment
 
 This site will autodeploy to GitHub Pages based on GitHub Actions.
+
