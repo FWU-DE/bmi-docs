@@ -1,27 +1,15 @@
 ---
-sidebar_position: 3
-title: "Licence Connect"
+sidebar_position: 2
+title: "Angebots-API"
 ---
 
-# Licence Connect
+# Licence Connect API
 
-Licence Connect ermöglicht Schulen, Schulträgern und Ländern, digitale Bildungsangebote einfach zu beschaffen und bereitzustellen, indem es Lizenzen aus verschiedenen Quellen aggregiert. 
-Licence Connect bietet einen einheitliche Schnittstelle, die Daten aus Lizenzmanagementsystemen in Ländern, Schulträgern oder Medienzentren abrufen können.
-Zudem können aktuelle und zukünftige Lizenzmodelle regional und überregional verwaltet werden, was die Arbeit von Schulen und Schulträgern sowie Anbietern digitaler Bildungsangebote erleichtert.
+Die Swagger UI kann gefunden werden unter: https://api.licenceconnect.schule/swagger-ui/index.html
 
-Auf der einen Seite erhält Licence Connect Basisdaten über Nutzer über die VIDIS-Infrastruktur. 
-Auf der anderen Seite bindet Licence Connect eine Menge an Lizenzmanagementsystemen an, von denen es Lizenzdaten auf Basis der Nutzerinformationen abruft.
-Die Lizenzdaten werden von Licence Connect zu einem einheitlichen Format aggregiert, und zwar dem ODRL standard.
+Die OpenAPI-Spezifikation ist zu finden unter: https://api.licenceconnect.schule/v3/api-docs.yaml
 
-Weitere Informationen zur Projektbeschreibung können gefunden werden unter: https://licenceconnect.schule/
-
-## Github Repository
-
-Das Github Repository ist zu finden unter: https://github.com/FWU-DE/licence-connect .
-
-## Swagger Documentation
-
-Die Live-Version der Swagger UI kann gefunden werden unter: https://api.licenceconnect.schule/swagger-ui/index.html
+Alternativ ist die OpenAPI-Spezifikation wie folgt:
 
 ```yaml
 openapi: 3.1.0

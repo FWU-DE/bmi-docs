@@ -56,7 +56,7 @@ const config = {
         // Plugin Options for loading OpenAPI files
         specs: [
           {
-            spec: 'api/swagger.json',
+            spec: 'api/lc-api.md',
             route: 'api/vidis',
           },
         ],
@@ -113,6 +113,11 @@ const config = {
             to: 'docs/vidis/intro',
             position: 'left',
             label: 'Vidis',
+          },
+          {
+            to: 'docs/licenceConnect/intro',
+            position: 'left',
+            label: 'Licence Connect',
           },
           {
             label: 'APIs',
