@@ -1,20 +1,19 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 title: "Licence Connect"
 ---
 
 # Licence Connect
 
-Licence Connect ermöglicht es Schulen, Schulträgern und Ländern, digitale Bildungsangebote einfach zu beschaffen, zuzuordnen und den Nutzern bereitzustellen. 
-Ziel des Projekts ist es, bestehende Systeme stärker und länderübergreifend zu vernetzen, indem Lizenzen aus verschiedenen regionalen Systemen gesammelt und über die VIDIS-Infrastruktur verarbeitet werden. 
-Dadurch wird die Autorisierung von Nutzern in Drittsystemen erleichtert.
+Licence Connect ermöglicht Schulen, Schulträgern und Ländern, digitale Bildungsangebote einfach zu beschaffen und bereitzustellen, indem es Lizenzen aus verschiedenen Quellen aggregiert. 
+Licence Connect bietet einen einheitliche Schnittstelle, die Daten aus Lizenzmanagementsystemen in Ländern, Schulträgern oder Medienzentren abrufen können.
+Zudem können aktuelle und zukünftige Lizenzmodelle regional und überregional verwaltet werden, was die Arbeit von Schulen und Schulträgern sowie Anbietern digitaler Bildungsangebote erleichtert.
 
-Ein dienstbasierter Ansatz, der sich auf Schnittstellen konzentriert, ermöglicht die Verwaltung aktueller und zukünftiger Lizenz- und Abrechnungsmodelle sowohl regional als auch überregional. 
-Auf diese Weise können Medienangebote rechtssicher und spezifisch für Lernende und Lehrende bereitgestellt werden. 
-Diese Vereinfachung kommt nicht nur Schulen und Schulträgern zugute, sondern entlastet auch Anbieter digitaler Bildungsangebote durch die Standardisierung der Schnittstellen.
+Auf der einen Seite erhält Licence Connect Basisdaten über Nutzer über die VIDIS-Infrastruktur. 
+Auf der anderen Seite bindet Licence Connect eine Menge an Lizenzmanagementsystemen an, von denen es Lizenzdaten auf Basis der Nutzerinformationen abruft.
+Die Lizenzdaten werden von Licence Connect zu einem einheitlichen Format aggregiert, und zwar dem ODRL standard.
 
-Um die Einheitlichkeit zu gewährleisten, sind funktionierende Lizenzmanagementsysteme in Ländern, bei Schulträgern oder Medienzentren erforderlich. 
-Diese Systeme müssen die Fähigkeit bieten, Lizenzinformationen abzurufen und über eine standardisierte Schnittstelle zur Verfügung zu stellen, damit das gesamte Netzwerk optimal miteinander arbeiten kann.
+Weitere Informationen zur Projektbeschreibung können gefunden werden unter: https://licenceconnect.schule/
 
 ## Github Repository
 
