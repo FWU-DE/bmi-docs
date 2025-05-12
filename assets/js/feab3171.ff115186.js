@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfwu_bmi_docs=self.webpackChunkfwu_bmi_docs||[]).push([[6777],{16768:s=>{s.exports={}}}]);

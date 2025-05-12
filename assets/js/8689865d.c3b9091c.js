@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfwu_bmi_docs=self.webpackChunkfwu_bmi_docs||[]).push([[1689],{18265:e=>{e.exports=JSON.parse('{"authors":[{"name":"Jan Renz","title":"Expert","url":"https://github.com/janrenz","imageURL":"https://github.com/endiliey.png","key":"endi","page":null,"count":0}]}')}}]);

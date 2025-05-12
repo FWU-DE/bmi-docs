@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfwu_bmi_docs=self.webpackChunkfwu_bmi_docs||[]).push([[1903],{1912:s=>{s.exports=JSON.parse('{"blogBasePath":"/bmi-docs/blog","blogTitle":"Blog","authorsListPath":"/bmi-docs/blog/authors"}')}}]);

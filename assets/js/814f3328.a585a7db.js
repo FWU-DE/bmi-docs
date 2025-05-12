@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfwu_bmi_docs=self.webpackChunkfwu_bmi_docs||[]).push([[7472],{55513:s=>{s.exports=JSON.parse('{"title":"Recent posts","items":[]}')}}]);

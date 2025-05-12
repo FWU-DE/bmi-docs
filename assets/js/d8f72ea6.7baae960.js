@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfwu_bmi_docs=self.webpackChunkfwu_bmi_docs||[]).push([[1448],{64971:s=>{s.exports=JSON.parse('{"name":"docusaurus-plugin-redoc","id":"plugin-redoc-1"}')}}]);
