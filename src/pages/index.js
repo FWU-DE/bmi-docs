@@ -16,7 +16,7 @@ function HomepageHeader() {
           {siteConfig.title}
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <p>Diese Seite ist noch eine Baustelle. Bitte benutzen Sie die offiziellen Dokumentationen, welche bei den Projekten direkt erhältlich sind.</p>
+        <p>Diese Seite befindet sich noch im Aufbau. Bitte benutzen Sie ergänzend Dokumentationen, welche bei den Projekten direkt erhältlich sind.</p>
       </div>
     </header>
   );
