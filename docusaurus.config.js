@@ -56,8 +56,12 @@ const config = {
         // Plugin Options for loading OpenAPI files
         specs: [
           {
-            spec: 'api/lc-api.md',
+            spec: 'api/vidis-offer.yaml',
             route: 'api/vidis',
+          },
+          {
+            spec: 'api/licence-connect.json',
+            route: 'api/licence-connect',
           },
         ],
         // Theme Options for modifying how redoc renders them
@@ -115,7 +119,7 @@ const config = {
             label: 'Vidis',
           },
           {
-            to: 'docs/licenceConnect/intro',
+            to: 'docs/licence-connect',
             position: 'left',
             label: 'Licence Connect',
           },
@@ -126,6 +130,10 @@ const config = {
               {
                 label: 'VIDIS Angebots API',
                 to: '/api/vidis',
+              },
+              {
+                label: 'Licence Connect API',
+                to: '/api/licence-connect',
               },
             ]
           },
