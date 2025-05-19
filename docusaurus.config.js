@@ -26,7 +26,7 @@ const config = {
         schema: "./schema/sodix.graphql",
         rootPath: "./docs", // docs will be generated under './docs/swapi' (rootPath/baseURL)
         baseURL: "sodixapi",
-        homepage: "./docs/sodixapi.md",
+        homepage: "./docs/sodixapi/",
         loaders: {
           GraphQLFileLoader: "@graphql-tools/graphql-file-loader" // local file schema
         }
