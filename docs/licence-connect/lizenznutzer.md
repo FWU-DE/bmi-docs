@@ -3,8 +3,6 @@ sidebar_position: 1
 title: "Für Lizenznutzer"
 ---
 
-## Für Lizenznutzende Systeme
-
 Lizenzinformationen aus Licence Connect können über VIDIS abgerufen werden.
 Aktuell ist das mit der erforderlichen Konfiguration im Staging-System möglich.
 

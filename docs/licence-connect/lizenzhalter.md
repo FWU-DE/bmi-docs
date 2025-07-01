@@ -3,8 +3,6 @@ sidebar_position: 2
 title: "Für Lizenzhalter"
 ---
 
-## Für Lizenzhaltende Systeme
-
 Um als lizenzhaltendes System Lizenzinformationen über Licence Connect zur Verfügung zu stellen, ist eine Anbindung an Licence Connect erforderlich.
 
 Lizenzinformationen werden abhängig von:
