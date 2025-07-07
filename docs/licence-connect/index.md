@@ -1,5 +1,4 @@
 ---
-sidebar_position: 1
 title: "Licence Connect"
 ---
 
@@ -21,4 +20,4 @@ Der gesamt Code ist Open Source verfügbar unter: https://github.com/FWU-DE/lice
 ## API Spezifikation
 
 Die aktuelle API von Licence Connect ist als OpenAPI Spezifikation unter [/api/licence-connect](/api/licence-connect) dokumentiert.
-Eine interaktive SwaggerUI ist hier verfügbar: https://api.licenceconnect.schule/swagger-ui/index.html.
+Eine interaktive SwaggerUI ist hier verfügbar: https://api.licenceconnect.schule/swagger.
