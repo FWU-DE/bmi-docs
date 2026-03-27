@@ -29,7 +29,7 @@ paths:
                   type: string
                   enum:
                     - ARIX
-                    - BILO_V1
+                    - LC_HALT
                     - BILO_V2
     put:
       tags:
@@ -48,79 +48,8 @@ paths:
               $ref: '#/components/schemas/ClientLicenceHolderMappingDto'
         required: true
       responses:
-        '200':
-          description: OK
-          content:
-            '*/*':
-              schema:
-                type: object
-  /v1/ucs/request:
-    get:
-      tags:
-        - bilo-v-1-controller
-      operationId: request
-      parameters:
-        - name: userId
-          in: query
-          required: true
-          schema:
-            type: string
-        - name: clientId
-          in: query
-          required: true
-          schema:
-            type: string
-        - name: schulkennung
-          in: query
-          required: false
-          schema:
-            type: string
-        - name: bundesland
-          in: query
-          required: true
-          schema:
-            type: string
-            enum:
-              - MV
-              - RP
-              - BW
-              - BY
-              - BE
-              - BB
-              - HB
-              - HH
-              - HE
-              - NI
-              - NW
-              - SL
-              - SN
-              - ST
-              - SH
-              - TH
-              - DE_MV
-              - DE_RP
-              - DE_BW
-              - DE_BY
-              - DE_BE
-              - DE_BB
-              - DE_HB
-              - DE_HH
-              - DE_HE
-              - DE_NI
-              - DE_NW
-              - DE_SL
-              - DE_SN
-              - DE_ST
-              - DE_SH
-              - DE_TH
-              - STK
-      responses:
-        '200':
-          description: OK
-          content:
-            '*/*':
-              schema:
-                $ref: '#/components/schemas/UcsLicenceeDto'
+        '204':
+          description: No Content
   /v1/licences/request:
     get:
       tags:
@@ -176,11 +105,6 @@ paths:
           required: false
           schema:
             type: string
-        - name: userId
-          in: query
-          required: false
-          schema:
-            type: string
         - name: clientName
           in: query
           required: true
@@ -192,9 +116,7 @@ paths:
           content:
             '*/*':
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Licence'
+                $ref: '#/components/schemas/ODRLPolicy'
   /v1/healthcheck:
     get:
       tags:
@@ -241,79 +163,38 @@ components:
             type: string
             enum:
               - ARIX
-              - BILO_V1
+              - LC_HALT
               - BILO_V2
       required:
         - availableLicenceHolders
-    Context:
+    ODRLPolicy:
       type: object
       properties:
-        licenses:
-          type: array
-          items:
-            type: string
-        classes:
-          type: array
-          items:
-            $ref: '#/components/schemas/UcsClassDto'
-        workgroups:
-          type: array
-          items:
-            $ref: '#/components/schemas/UcsWorkgroupDto'
-        school_authority:
+        '@context':
           type: string
-        school_identifier:
+          example: http://www.w3.org/ns/odrl.jsonld
+        '@type':
           type: string
-        school_name:
+          example: Set
+        uid:
           type: string
-        roles:
+          example: urn:uuid:550e8400-e29b-41d4-a716-446655440000
+        permission:
           type: array
           items:
-            type: string
-    UcsClassDto:
+            $ref: '#/components/schemas/Permission'
+    Permission:
       type: object
       properties:
-        name:
+        target:
           type: string
-        id:
+          example: urn:bilo:medium:1234567890
+        assigner:
           type: string
-        licenses:
-          type: array
-          items:
-            type: string
-    UcsLicenceeDto:
-      type: object
-      properties:
-        id:
+          example: https://www.bildungslogin.de
+        action:
           type: string
-        first_name:
-          type: string
-        last_name:
-          type: string
-        licenses:
-          type: array
-          items:
-            type: string
-        context:
-          type: object
-          additionalProperties:
-            $ref: '#/components/schemas/Context'
-    UcsWorkgroupDto:
-      type: object
-      properties:
-        name:
-          type: string
-        id:
-          type: string
-        licenses:
-          type: array
-          items:
-            type: string
-    Licence:
-      type: object
-      properties:
-        licenceCode:
-          type: string
+          example: use
   securitySchemes:
     apiKey:
       type: apiKey
