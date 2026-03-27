@@ -7,7 +7,6 @@ Um als lizenzhaltendes System Lizenzinformationen über Licence Connect zur Verf
 
 Lizenzinformationen werden abhängig von:
 
-* userId des Users im Ländersystem
 * Bundesland
 * Standortnummer
 * Schulnummer
