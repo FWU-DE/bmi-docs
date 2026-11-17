@@ -94,3 +94,9 @@ Content-Type: application/json; charset=utf-8
   ...
 ]
 ```
+
+### Freigabe-UI
+
+In der Freigabe-UI konfiguriert eine Schule, welche Daten an die jeweiligen Applikationen übertragen werden dürfen.
+
+![](./freigabe-ui.png)
