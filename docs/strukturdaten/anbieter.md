@@ -30,8 +30,9 @@ Der Autorisierungsserver ist [VIDIS](https://aai.vidis.schule/auth/realms/vidis/
 GET /schulconnex/v1/personen-info?vollstaendig=personenkontexte,personen,gruppen&organisation.id=8e0289a5-b841-43ff-a394-ea1eee19c3dc HTTP/1.1
 Host: ssd.vidis.schule
 Authorization: Bearer $TOKEN
+```
 
-
+```
 HTTP/1.1 200 OK
 ETag: W/"1.h5vj8mcu3g"
 Content-Type: application/json; charset=utf-8
@@ -93,3 +94,9 @@ Content-Type: application/json; charset=utf-8
   ...
 ]
 ```
+
+### Freigabe-UI
+
+In der Freigabe-UI konfiguriert eine Schule, welche Daten an die jeweiligen Applikationen übertragen werden dürfen.
+
+![](./freigabe-ui.png)
